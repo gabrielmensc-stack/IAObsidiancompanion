@@ -1,0 +1,83 @@
+/* Styles for Obsidian Notebook Agent */
+
+.notebook-agent-view-container {
+    padding: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.notebook-agent-header {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding-bottom: 10px;
+}
+
+.notebook-agent-header h4 {
+    margin: 0 0 10px 0;
+}
+
+.notebook-agent-context-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9em;
+}
+
+.notebook-agent-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notebook-agent-input-area {
+    display: flex;
+    gap: 5px;
+}
+
+.notebook-agent-input {
+    flex-grow: 1;
+    resize: none;
+    min-height: 50px;
+}
+
+.notebook-agent-message {
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 90%;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
+
+.notebook-agent-message p {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.notebook-agent-message.user {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    align-self: flex-end;
+}
+
+.notebook-agent-message.ai {
+    background-color: var(--background-secondary);
+    color: var(--text-normal);
+    align-self: flex-start;
+}
+
+.notebook-agent-message.loading {
+    font-style: italic;
+    opacity: 0.7;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
